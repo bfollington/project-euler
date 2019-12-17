@@ -5,8 +5,6 @@ module Problem3
   What is the largest prime factor of the number 600851475143 ?
 *)
 
-let n = 600851475143L
-
 let isqrt v = v |> float |> sqrt |> int64
 
 let rec keepDividingBy2 (v: int64) = 
@@ -24,7 +22,7 @@ let searchForFactors n =
   |> List.fold testPrimeFactor (n, 1L)
   |> snd 
 
-n
+600851475143L
 |> keepDividingBy2
 |> searchForFactors
 |> printfn "%A" 
