@@ -5,6 +5,7 @@ module Problem3
   What is the largest prime factor of the number 600851475143 ?
 *)
 
+// Silly workaround to sqrt an int64
 let isqrt v = v |> float |> sqrt |> int64
 
 let rec keepDividingBy2 (v: int64) = 
